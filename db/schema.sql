@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS nextgen_db;
+
+CREATE DATABASE  nextgen_db;

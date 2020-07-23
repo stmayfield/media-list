@@ -1,0 +1,24 @@
+{
+  "name": "media-list",
+  "version": "1.0.0",
+  "description": "Database management for upcoming next generation console video games",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stmayfield/media-list.git"
+  },
+  "author": "Stephen Mayfield",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stmayfield/media-list/issues"
+  },
+  "homepage": "https://github.com/stmayfield/media-list#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.3"
+  }
+}
