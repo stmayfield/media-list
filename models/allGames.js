@@ -1,14 +1,8 @@
 module.exports = function (sequelize, DataTypes) {
-    const allGames = sequelize.define("Games", {
-        ps5: {
-            type: DataTypes.STRING
-        },
-        xbox_x: {
-            type: DataTypes.STRING
-        },
-        thirdarty: {
-            type: DataTypes.STRING
-        }
+    const Games = sequelize.define('Games', {
+        ps5: DataTypes.STRING,
+        xbox_x: DataTypes.STRING,
+        thirdparty: DataTypes.STRING
     });
-    return allGames;
+    return Games;
 }
