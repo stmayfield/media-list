@@ -1,3 +1,7 @@
+# Legacy
+config/
+db/
+
 # Logs
 logs
 *.log

@@ -1,16 +1,19 @@
 const express = require('express');
-const db = require('./models');
+const mongoose = require('mongoose');
 const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('/public/'));
+app.use(express.static('public'));
+
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mediaDB', {
+    useNewUrlParser: true,
+    useFindAndModify: false
+});
 
 require('./routes/html-routes.js')(app);
 
-db.sequelize.sync().then(() => {
-    app.listen(PORT, () => {
-        console.log(`http://localhost:${PORT}`);
-    })
-})
+app.listen(PORT, () => {
+    console.log(`http://localhost:${PORT}`);
+});

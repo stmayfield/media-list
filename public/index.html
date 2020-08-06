@@ -5,10 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
-    <h1>Document</h1>
+    <div id="main">
+        <form>
+            <form action="/" id="contact-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form group">
+                            <label for="nameFirst">First Name</label>
+                            <input type="text" class="form-control" id="nameFirst" name="nameFirst" placeholder="First">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form group mt-2 mt-md-0">
+                            <label for="nameLast">Last Name</label>
+                            <input type="text" class="form-control" id="nameLast" name="nameLast" placeholder="Last">
+                        </div>
+                    </div>
+                </div>
+                <div class="form group mt-2">
+                    <label for="emailInput">Email address</label>
+                    <input type="email" class="form-control" id="emailInput" name="emailInput"
+                        placeholder="example@domain.com">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="navigationSource">How did you find this portfolio?</label>
+                    <select class="form-control" id="navigationSource" name="navigationSource">
+                        <option selected disabled value="select">Select one...</option>
+                        <option>LinkedIn</option>
+                        <option>GitHub</option>
+                        <option>Business Card/Personal Reference</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="messageToAdmin">Enter your message here</label>
+                    <textarea class="form-control" rows="5" id="messageToAdmin" name="messageToAdmin"></textarea>
+                </div>
+                <input type="submit" value="Submit" class="btn btn-primary" id="submit">
+                <input type="reset" value="Reset" class="btn btn-secondary" id="reset">
+            </form>
+        </form>
+    </div>
+
+    <div id="display">
+
+    </div>
+
+
 </body>
 
 </html>

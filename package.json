@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "watch": "nodemon server.js"
+    "watch": "nodemon server.js",
+    "seed": "node seeders/seed.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,6 @@
   "homepage": "https://github.com/stmayfield/media-list#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mysql2": "^2.1.0",
-    "sequelize": "^6.3.3"
+    "mongoose": "^5.9.27"
   }
 }
