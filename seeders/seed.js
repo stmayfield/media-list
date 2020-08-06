@@ -33,8 +33,8 @@ const dbSeed = [
     }
 ];
 
-db.Games.deleteMany({})
-    .then(() => db.Games.collection.insertMany(dbSeed))
+db.Game.deleteMany({})
+    .then(() => db.Game.collection.insertMany(dbSeed))
     .then(data => {
         console.log(`${data.result.n} records inserted!`);
         process.exit(0);

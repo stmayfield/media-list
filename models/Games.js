@@ -7,10 +7,8 @@ const gamesSchema = new Schema({
     release_date: Date,
     release_date_string: Date,
     platform: {
-        type: Number,
-        min: 0,
-        max: 5,
-        default: []
+        type: [Number],
+        index: true
     },
     date_added: {
         type: Date,
@@ -19,6 +17,16 @@ const gamesSchema = new Schema({
 
 });
 
-const Games = mongoose.model('Games', gamesSchema)
+const Game = mongoose.model('Game', gamesSchema, 'games')
 
-module.exports = Games;
+module.exports = Game;
+
+// platform key
+/*
+0 3rd-Party
+1 X1
+2 PS4
+3 Xbox Series
+4 PS5
+5 PC
+*/
