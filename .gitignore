@@ -1,6 +1,5 @@
 # Legacy
-config/
-db/
+legacy/
 
 # Logs
 logs
